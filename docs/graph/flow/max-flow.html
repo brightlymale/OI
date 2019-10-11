@@ -1,0 +1,4274 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>最大流 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="min-cut.html" />
+    
+    
+    <link rel="prev" href="../flow.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../intro/roadmap.html">
+            
+                <a href="../../intro/roadmap.html">
+            
+                    
+                    学习路线
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../intro/resources.html">
+            
+                <a href="../../intro/resources.html">
+            
+                    
+                    学习资源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../intro/common-mistakes.html">
+            
+                <a href="../../intro/common-mistakes.html">
+            
+                    
+                    常见错误
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../intro/common-tricks.html">
+            
+                <a href="../../intro/common-tricks.html">
+            
+                    
+                    常见技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../intro/oi.html">
+            
+                <a href="../../intro/oi.html">
+            
+                    
+                    OI赛事与赛制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    [语言基础]
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../basic/">
+            
+                <a href="../../basic/">
+            
+                    
+                    算法基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../basic/enumerate.html">
+            
+                <a href="../../basic/enumerate.html">
+            
+                    
+                    枚举
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../basic/simulate.html">
+            
+                <a href="../../basic/simulate.html">
+            
+                    
+                    模拟
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../basic/divide-and-conquer.html">
+            
+                <a href="../../basic/divide-and-conquer.html">
+            
+                    
+                    递归&分治
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../basic/sort-intro.html">
+            
+                <a href="../../basic/sort-intro.html">
+            
+                    
+                    排序
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../../basic/selection-sort.html">
+            
+                <a href="../../basic/selection-sort.html">
+            
+                    
+                    选择排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../../basic/bubble-sort.html">
+            
+                <a href="../../basic/bubble-sort.html">
+            
+                    
+                    冒泡排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../../basic/insertion-sort.html">
+            
+                <a href="../../basic/insertion-sort.html">
+            
+                    
+                    插入排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../../basic/counting-sort.html">
+            
+                <a href="../../basic/counting-sort.html">
+            
+                    
+                    计数排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.5" data-path="../../basic/radix-sort.html">
+            
+                <a href="../../basic/radix-sort.html">
+            
+                    
+                    基数排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.6" data-path="../../basic/quick-sort.html">
+            
+                <a href="../../basic/quick-sort.html">
+            
+                    
+                    快速排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.7" data-path="../../basic/merge-sort.html">
+            
+                <a href="../../basic/merge-sort.html">
+            
+                    
+                    归并排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.8" data-path="../../basic/heap-sort.html">
+            
+                <a href="../../basic/heap-sort.html">
+            
+                    
+                    堆排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.9" data-path="../../basic/bucket-sort.html">
+            
+                <a href="../../basic/bucket-sort.html">
+            
+                    
+                    桶排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.10" data-path="../../basic/shell-sort.html">
+            
+                <a href="../../basic/shell-sort.html">
+            
+                    
+                    希尔排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.11" data-path="../../basic/stl-sort.html">
+            
+                <a href="../../basic/stl-sort.html">
+            
+                    
+                    排序相关STL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.12" data-path="../../basic/use-of-sort.html">
+            
+                <a href="../../basic/use-of-sort.html">
+            
+                    
+                    排序应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../../basic/binary.html">
+            
+                <a href="../../basic/binary.html">
+            
+                    
+                    二分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../../basic/binary-acc.html">
+            
+                <a href="../../basic/binary-acc.html">
+            
+                    
+                    倍增
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../../basic/construction.html">
+            
+                <a href="../../basic/construction.html">
+            
+                    
+                    构造
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../../basic/prefix-sum.html">
+            
+                <a href="../../basic/prefix-sum.html">
+            
+                    
+                    前缀&差分
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../search/">
+            
+                <a href="../../search/">
+            
+                    
+                    搜索
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../search/dfs.html">
+            
+                <a href="../../search/dfs.html">
+            
+                    
+                    DFS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../search/bfs.html">
+            
+                <a href="../../search/bfs.html">
+            
+                    
+                    BFS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../search/bidirectional.html">
+            
+                <a href="../../search/bidirectional.html">
+            
+                    
+                    双向搜索
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../../search/heuristic.html">
+            
+                <a href="../../search/heuristic.html">
+            
+                    
+                    启发式搜索
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../../search/astar.html">
+            
+                <a href="../../search/astar.html">
+            
+                    
+                    A-star
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../../search/iterative.html">
+            
+                <a href="../../search/iterative.html">
+            
+                    
+                    迭代加深搜索
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../../search/idastar.html">
+            
+                <a href="../../search/idastar.html">
+            
+                    
+                    IDA-star
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../../search/backtracking.html">
+            
+                <a href="../../search/backtracking.html">
+            
+                    
+                    回溯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../../search/dlx.html">
+            
+                <a href="../../search/dlx.html">
+            
+                    
+                    Dancing Links
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../../search/opt.html">
+            
+                <a href="../../search/opt.html">
+            
+                    
+                    优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../dp/">
+            
+                <a href="../../dp/">
+            
+                    
+                    动态规划
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../dp/memo.html">
+            
+                <a href="../../dp/memo.html">
+            
+                    
+                    记忆化搜索
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../dp/knapsack.html">
+            
+                <a href="../../dp/knapsack.html">
+            
+                    
+                    背包DP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../dp/interval.html">
+            
+                <a href="../../dp/interval.html">
+            
+                    
+                    区间DP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../../dp/dag.html">
+            
+                <a href="../../dp/dag.html">
+            
+                    
+                    DAG上的DP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../../dp/tree.html">
+            
+                <a href="../../dp/tree.html">
+            
+                    
+                    树形DP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../../dp/state.html">
+            
+                <a href="../../dp/state.html">
+            
+                    
+                    状压DP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../../dp/number.html">
+            
+                <a href="../../dp/number.html">
+            
+                    
+                    数位DP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../../dp/plug.html">
+            
+                <a href="../../dp/plug.html">
+            
+                    
+                    插头DP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../../dp/count.html">
+            
+                <a href="../../dp/count.html">
+            
+                    
+                    计数DP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../../dp/dynamic.html">
+            
+                <a href="../../dp/dynamic.html">
+            
+                    
+                    动态DP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" >
+            
+                <span>
+            
+                    
+                    [DP优化]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.11.1" data-path="../../dp/opt/binary-knapsack.html">
+            
+                <a href="../../dp/opt/binary-knapsack.html">
+            
+                    
+                    二进制分组解多重背包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11.2" data-path="../../dp/opt/monotonous-queue-stack.html">
+            
+                <a href="../../dp/opt/monotonous-queue-stack.html">
+            
+                    
+                    单调队列/单调栈优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11.3" data-path="../../dp/opt/slope.html">
+            
+                <a href="../../dp/opt/slope.html">
+            
+                    
+                    斜率优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11.4" data-path="../../dp/opt/quadrangle.html">
+            
+                <a href="../../dp/opt/quadrangle.html">
+            
+                    
+                    四边形不等式优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11.5" data-path="../../dp/opt/state.html">
+            
+                <a href="../../dp/opt/state.html">
+            
+                    
+                    状态设计优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../string/">
+            
+                <a href="../../string/">
+            
+                    
+                    字符串
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../string/match.html">
+            
+                <a href="../../string/match.html">
+            
+                    
+                    字符串匹配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../string/hash.html">
+            
+                <a href="../../string/hash.html">
+            
+                    
+                    字符串哈希
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../../string/trie.html">
+            
+                <a href="../../string/trie.html">
+            
+                    
+                    字典树Trie
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../../string/kmp.html">
+            
+                <a href="../../string/kmp.html">
+            
+                    
+                    前缀函数&KMP算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../../string/z-func.html">
+            
+                <a href="../../string/z-func.html">
+            
+                    
+                    Z函数(扩展KMP)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../../string/automaton.html">
+            
+                <a href="../../string/automaton.html">
+            
+                    
+                    自动机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../../string/ac-automaton.html">
+            
+                <a href="../../string/ac-automaton.html">
+            
+                    
+                    AC自动机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="../../string/sa.html">
+            
+                <a href="../../string/sa.html">
+            
+                    
+                    后缀数组(SA)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="../../string/sam.html">
+            
+                <a href="../../string/sam.html">
+            
+                    
+                    后缀自动机(SAM)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.10" data-path="../../string/general-sam.html">
+            
+                <a href="../../string/general-sam.html">
+            
+                    
+                    广义后缀自动机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.11" data-path="../../string/suffix-tree.html">
+            
+                <a href="../../string/suffix-tree.html">
+            
+                    
+                    后缀树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.12" data-path="../../string/manacher.html">
+            
+                <a href="../../string/manacher.html">
+            
+                    
+                    Manacher
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.13" data-path="../../string/pam.html">
+            
+                <a href="../../string/pam.html">
+            
+                    
+                    回文自动机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.14" data-path="../../string/seq-automaton.html">
+            
+                <a href="../../string/seq-automaton.html">
+            
+                    
+                    序列自动机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.15" data-path="../../string/minimal-string.html">
+            
+                <a href="../../string/minimal-string.html">
+            
+                    
+                    最小表示法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.16" data-path="../../string/lyndon.html">
+            
+                <a href="../../string/lyndon.html">
+            
+                    
+                    Lyndon分解
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../math/">
+            
+                <a href="../../math/">
+            
+                    
+                    数学
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" >
+            
+                <span>
+            
+                    
+                    [基础知识]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1.1" data-path="../../math/vector.html">
+            
+                <a href="../../math/vector.html">
+            
+                    
+                    向量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.2" data-path="../../math/complex.html">
+            
+                <a href="../../math/complex.html">
+            
+                    
+                    复数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.3" data-path="../../math/polar-coordinate.html">
+            
+                <a href="../../math/polar-coordinate.html">
+            
+                    
+                    极坐标系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.4" data-path="../../math/bit.html">
+            
+                <a href="../../math/bit.html">
+            
+                    
+                    位运算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.5" data-path="../../math/quick-pow.html">
+            
+                <a href="../../math/quick-pow.html">
+            
+                    
+                    快速幂
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" >
+            
+                <span>
+            
+                    
+                    [数论]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.2.1" data-path="../../math/prime.html">
+            
+                <a href="../../math/prime.html">
+            
+                    
+                    素数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2.2" data-path="../../math/gcd.html">
+            
+                <a href="../../math/gcd.html">
+            
+                    
+                    最大公约数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2.3" data-path="../../math/euler.html">
+            
+                <a href="../../math/euler.html">
+            
+                    
+                    欧拉函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2.4" data-path="../../math/sieve.html">
+            
+                <a href="../../math/sieve.html">
+            
+                    
+                    筛法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2.5" data-path="../../math/fermat.html">
+            
+                <a href="../../math/fermat.html">
+            
+                    
+                    欧拉定理&费马小定理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2.6" data-path="../../math/euclidean.html">
+            
+                <a href="../../math/euclidean.html">
+            
+                    
+                    类欧几里得算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" >
+            
+                <span>
+            
+                    
+                    [同余与同余方程]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.3.1" data-path="../../math/bezouts.html">
+            
+                <a href="../../math/bezouts.html">
+            
+                    
+                    裴属定理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.2" data-path="../../math/inverse.html">
+            
+                <a href="../../math/inverse.html">
+            
+                    
+                    乘法逆元
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.3" data-path="../../math/linear-equation.html">
+            
+                <a href="../../math/linear-equation.html">
+            
+                    
+                    线性同余方程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.4" data-path="../../math/crt.html">
+            
+                <a href="../../math/crt.html">
+            
+                    
+                    中国剩余定理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.5" data-path="../../math/bsgs.html">
+            
+                <a href="../../math/bsgs.html">
+            
+                    
+                    BSGS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.6" data-path="../../math/primitive-root.html">
+            
+                <a href="../../math/primitive-root.html">
+            
+                    
+                    原根
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.7" data-path="../../math/lucas.html">
+            
+                <a href="../../math/lucas.html">
+            
+                    
+                    卢卡斯定理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../../math/base.html">
+            
+                <a href="../../math/base.html">
+            
+                    
+                    进位制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" >
+            
+                <span>
+            
+                    
+                    [数论函数]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.5.1" data-path="../../math/mobius.html">
+            
+                <a href="../../math/mobius.html">
+            
+                    
+                    莫比乌斯反演
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5.2" data-path="../../math/du.html">
+            
+                <a href="../../math/du.html">
+            
+                    
+                    杜教筛
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5.3" data-path="../../math/min-25.html">
+            
+                <a href="../../math/min-25.html">
+            
+                    
+                    Min-25筛
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../../math/poly/intro.html">
+            
+                <a href="../../math/poly/intro.html">
+            
+                    
+                    多项式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.6.1" data-path="../../math/poly/lagrange.html">
+            
+                <a href="../../math/poly/lagrange.html">
+            
+                    
+                    拉格朗日插值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6.2" data-path="../../math/poly/fft.html">
+            
+                <a href="../../math/poly/fft.html">
+            
+                    
+                    快速傅里叶变换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6.3" data-path="../../math/poly/ntt.html">
+            
+                <a href="../../math/poly/ntt.html">
+            
+                    
+                    快速数论变换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6.4" data-path="../../math/poly/fwt.html">
+            
+                <a href="../../math/poly/fwt.html">
+            
+                    
+                    快速沃尔什变换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6.5" data-path="../../math/poly/inv.html">
+            
+                <a href="../../math/poly/inv.html">
+            
+                    
+                    多项式求逆
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6.6" data-path="../../math/poly/sqrt.html">
+            
+                <a href="../../math/poly/sqrt.html">
+            
+                    
+                    多项式开方
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6.7" data-path="../../math/poly/div-mod.html">
+            
+                <a href="../../math/poly/div-mod.html">
+            
+                    
+                    多项式对数函数&指数函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6.8" data-path="../../math/poly/ln-exp.html">
+            
+                <a href="../../math/poly/ln-exp.html">
+            
+                    
+                    多项式牛顿迭代
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6.9" data-path="../../math/poly/newton.html">
+            
+                <a href="../../math/poly/newton.html">
+            
+                    
+                    多项式多点求值&快速插值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6.10" data-path="../../math/poly/tri-func.html">
+            
+                <a href="../../math/poly/tri-func.html">
+            
+                    
+                    多项式三角函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6.11" data-path="../../math/poly/inv-tri-func.html">
+            
+                <a href="../../math/poly/inv-tri-func.html">
+            
+                    
+                    多项式反三角函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" >
+            
+                <span>
+            
+                    
+                    [线性代数]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.7.1" data-path="../../math/matrix.html">
+            
+                <a href="../../math/matrix.html">
+            
+                    
+                    矩阵
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7.2" data-path="../../math/gauss.html">
+            
+                <a href="../../math/gauss.html">
+            
+                    
+                    高斯消元
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7.3" data-path="../../math/basis.html">
+            
+                <a href="../../math/basis.html">
+            
+                    
+                    线性基
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" >
+            
+                <span>
+            
+                    
+                    [抽象代数]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.8.1" data-path="../../math/permutation-group.html">
+            
+                <a href="../../math/permutation-group.html">
+            
+                    
+                    置换群
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" >
+            
+                <span>
+            
+                    
+                    [组合数学]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.9.1" data-path="../../math/combination.html">
+            
+                <a href="../../math/combination.html">
+            
+                    
+                    排列组合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9.2" data-path="../../math/catalan.html">
+            
+                <a href="../../math/catalan.html">
+            
+                    
+                    卡特兰数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9.3" data-path="../../math/stirling.html">
+            
+                <a href="../../math/stirling.html">
+            
+                    
+                    斯特林数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9.4" data-path="../../math/cantor.html">
+            
+                <a href="../../math/cantor.html">
+            
+                    
+                    康托展开
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9.5" data-path="../../math/inclusion-exclusion-principle.html">
+            
+                <a href="../../math/inclusion-exclusion-principle.html">
+            
+                    
+                    容斥原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9.6" data-path="../../math/drawer-principle.html">
+            
+                <a href="../../math/drawer-principle.html">
+            
+                    
+                    抽屉原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9.7" data-path="../../math/expectation.html">
+            
+                <a href="../../math/expectation.html">
+            
+                    
+                    概率&期望
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="../../math/linear-programming.html">
+            
+                <a href="../../math/linear-programming.html">
+            
+                    
+                    线性规划
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.10.1" data-path="../../math/simplex.html">
+            
+                <a href="../../math/simplex.html">
+            
+                    
+                    单纯形算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="../../math/game-theory.html">
+            
+                <a href="../../math/game-theory.html">
+            
+                    
+                    博弈论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12" >
+            
+                <span>
+            
+                    
+                    [常用算法]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.12.1" data-path="../../math/newton.html">
+            
+                <a href="../../math/newton.html">
+            
+                    
+                    牛顿迭代法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12.2" data-path="../../math/integral.html">
+            
+                <a href="../../math/integral.html">
+            
+                    
+                    数值积分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12.3" data-path="../../math/bignum.html">
+            
+                <a href="../../math/bignum.html">
+            
+                    
+                    高精度计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12.4" data-path="../../math/dictionary.html">
+            
+                <a href="../../math/dictionary.html">
+            
+                    
+                    分段打表
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13" data-path="../../math/fibonacci.html">
+            
+                <a href="../../math/fibonacci.html">
+            
+                    
+                    斐波那契数列
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../ds/">
+            
+                <a href="../../ds/">
+            
+                    
+                    数据结构
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../../ds/stack.html">
+            
+                <a href="../../ds/stack.html">
+            
+                    
+                    栈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../../ds/queue.html">
+            
+                <a href="../../ds/queue.html">
+            
+                    
+                    队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../../ds/linked-list.html">
+            
+                <a href="../../ds/linked-list.html">
+            
+                    
+                    链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../../ds/hash.html">
+            
+                <a href="../../ds/hash.html">
+            
+                    
+                    哈希表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../../ds/dsu.html">
+            
+                <a href="../../ds/dsu.html">
+            
+                    
+                    并查集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../../ds/heap.html">
+            
+                <a href="../../ds/heap.html">
+            
+                    
+                    堆
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.6.1" data-path="../../ds/binary-heap.html">
+            
+                <a href="../../ds/binary-heap.html">
+            
+                    
+                    二叉堆
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6.2" data-path="../../ds/pairing-heap.html">
+            
+                <a href="../../ds/pairing-heap.html">
+            
+                    
+                    配对堆
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6.3" data-path="../../ds/leftist-tree.html">
+            
+                <a href="../../ds/leftist-tree.html">
+            
+                    
+                    左偏树
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" >
+            
+                <span>
+            
+                    
+                    [块状数据结构]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.7.1" data-path="../../ds/decompose.html">
+            
+                <a href="../../ds/decompose.html">
+            
+                    
+                    分块思想
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7.2" data-path="../../ds/tree-decompose.html">
+            
+                <a href="../../ds/tree-decompose.html">
+            
+                    
+                    树分块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7.3" data-path="../../ds/block-list.html">
+            
+                <a href="../../ds/block-list.html">
+            
+                    
+                    块状链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7.4" data-path="../../ds/block-array.html">
+            
+                <a href="../../ds/block-array.html">
+            
+                    
+                    块状数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7.5" data-path="../../ds/sqrt-tree.html">
+            
+                <a href="../../ds/sqrt-tree.html">
+            
+                    
+                    sqrt tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="../../ds/monotonous-stack.html">
+            
+                <a href="../../ds/monotonous-stack.html">
+            
+                    
+                    单调栈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="../../ds/monotonous-queue.html">
+            
+                <a href="../../ds/monotonous-queue.html">
+            
+                    
+                    单调队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10" data-path="../../ds/sparse-table.html">
+            
+                <a href="../../ds/sparse-table.html">
+            
+                    
+                    ST表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.11" data-path="../../ds/bit.html">
+            
+                <a href="../../ds/bit.html">
+            
+                    
+                    树状数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.12" data-path="../../ds/seg.html">
+            
+                <a href="../../ds/seg.html">
+            
+                    
+                    线段树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.13" data-path="../../ds/seg-beats.html">
+            
+                <a href="../../ds/seg-beats.html">
+            
+                    
+                    区间最值操作&区间历史最值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.14" data-path="../../ds/dividing.html">
+            
+                <a href="../../ds/dividing.html">
+            
+                    
+                    划分树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.15" data-path="../../ds/bst.html">
+            
+                <a href="../../ds/bst.html">
+            
+                    
+                    二叉搜索树&平衡树
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.15.1" data-path="../../ds/treap.html">
+            
+                <a href="../../ds/treap.html">
+            
+                    
+                    Treap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.15.2" data-path="../../ds/splay.html">
+            
+                <a href="../../ds/splay.html">
+            
+                    
+                    Splay
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.15.3" data-path="../../ds/wblt.html">
+            
+                <a href="../../ds/wblt.html">
+            
+                    
+                    WBLT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.15.4" data-path="../../ds/sbt.html">
+            
+                <a href="../../ds/sbt.html">
+            
+                    
+                    Size Balanced Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.15.5" data-path="../../ds/avl.html">
+            
+                <a href="../../ds/avl.html">
+            
+                    
+                    AVL树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.15.6" data-path="../../ds/sgt.html">
+            
+                <a href="../../ds/sgt.html">
+            
+                    
+                    替罪羊树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.15.7" data-path="../../ds/cartesian-tree.html">
+            
+                <a href="../../ds/cartesian-tree.html">
+            
+                    
+                    笛卡尔树
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.16" data-path="../../ds/persistent.html">
+            
+                <a href="../../ds/persistent.html">
+            
+                    
+                    可持久化数据结构
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.16.1" data-path="../../ds/persistent-seg.html">
+            
+                <a href="../../ds/persistent-seg.html">
+            
+                    
+                    可持久化线段树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.16.2" data-path="../../ds/persistent-block-array.html">
+            
+                <a href="../../ds/persistent-block-array.html">
+            
+                    
+                    可持久化块状数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.16.3" data-path="../../ds/persistent-balanced.html">
+            
+                <a href="../../ds/persistent-balanced.html">
+            
+                    
+                    可持久化平衡树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.16.4" data-path="../../ds/persistent-trie.html">
+            
+                <a href="../../ds/persistent-trie.html">
+            
+                    
+                    可持久化字典树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.16.5" data-path="../../ds/persistent-in-bit.html">
+            
+                <a href="../../ds/persistent-in-bit.html">
+            
+                    
+                    可持久化可并堆
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.16.6" data-path="../../ds/persistent-heap.html">
+            
+                <a href="../../ds/persistent-heap.html">
+            
+                    
+                    可持久化左偏树
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.17" >
+            
+                <span>
+            
+                    
+                    [树套树]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.17.1" data-path="../../ds/seg-in-seg.html">
+            
+                <a href="../../ds/seg-in-seg.html">
+            
+                    
+                    线段树套线段树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.17.2" data-path="../../ds/seg-in-balanced.html">
+            
+                <a href="../../ds/seg-in-balanced.html">
+            
+                    
+                    平衡树套线段树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.17.3" data-path="../../ds/balanced-in-seg.html">
+            
+                <a href="../../ds/balanced-in-seg.html">
+            
+                    
+                    线段树套平衡树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.17.4" data-path="../../ds/persistent-in-bit.html">
+            
+                <a href="../../ds/persistent-in-bit.html">
+            
+                    
+                    树状数组套主席树
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.18" data-path="../../ds/kdt.html">
+            
+                <a href="../../ds/kdt.html">
+            
+                    
+                    K-D Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.19" data-path="../../ds/odt.html">
+            
+                <a href="../../ds/odt.html">
+            
+                    
+                    珂朵莉树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.20" >
+            
+                <span>
+            
+                    
+                    [动态树]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.20.1" data-path="../../ds/lct.html">
+            
+                <a href="../../ds/lct.html">
+            
+                    
+                    Link Cut Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.20.2" data-path="../../ds/ett.html">
+            
+                <a href="../../ds/ett.html">
+            
+                    
+                    Euler Tour Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.20.3" data-path="../../ds/top-tree.html">
+            
+                <a href="../../ds/top-tree.html">
+            
+                    
+                    Top Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.21" data-path="../../ds/divide-combine.html">
+            
+                <a href="../../ds/divide-combine.html">
+            
+                    
+                    析合树
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    图论
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../basic.html">
+            
+                <a href="../basic.html">
+            
+                    
+                    图论基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../dfs.html">
+            
+                <a href="../dfs.html">
+            
+                    
+                    DFS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../bfs.html">
+            
+                <a href="../bfs.html">
+            
+                    
+                    BFS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" >
+            
+                <span>
+            
+                    
+                    [树上问题]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.4.1" data-path="../tree-basic.html">
+            
+                <a href="../tree-basic.html">
+            
+                    
+                    树基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4.2" data-path="../lca.html">
+            
+                <a href="../lca.html">
+            
+                    
+                    最近公共祖先
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4.3" data-path="../tree-misc.html">
+            
+                <a href="../tree-misc.html">
+            
+                    
+                    树的其他问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4.4" data-path="../tree-hash.html">
+            
+                <a href="../tree-hash.html">
+            
+                    
+                    树哈希
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4.5" data-path="../hld.html">
+            
+                <a href="../hld.html">
+            
+                    
+                    树链剖分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4.6" data-path="../tree-divide.html">
+            
+                <a href="../tree-divide.html">
+            
+                    
+                    树分治
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4.7" data-path="../dynamic-tree-divide.html">
+            
+                <a href="../dynamic-tree-divide.html">
+            
+                    
+                    动态树分治
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4.8" data-path="../virtual-tree.html">
+            
+                <a href="../virtual-tree.html">
+            
+                    
+                    虚树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4.9" data-path="../dsu-on-tree.html">
+            
+                <a href="../dsu-on-tree.html">
+            
+                    
+                    树上启发式合并
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../matrix-tree.html">
+            
+                <a href="../matrix-tree.html">
+            
+                    
+                    矩阵树定理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../dag.html">
+            
+                <a href="../dag.html">
+            
+                    
+                    有向无环图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="../topo.html">
+            
+                <a href="../topo.html">
+            
+                    
+                    拓扑排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8" data-path="../mst.html">
+            
+                <a href="../mst.html">
+            
+                    
+                    最小生成树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.9" data-path="../mdst.html">
+            
+                <a href="../mdst.html">
+            
+                    
+                    最小树形图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.10" data-path="../shortest-path.html">
+            
+                <a href="../shortest-path.html">
+            
+                    
+                    最短路
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.11" data-path="../node.html">
+            
+                <a href="../node.html">
+            
+                    
+                    拆点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.12" data-path="../diff-constraints.html">
+            
+                <a href="../diff-constraints.html">
+            
+                    
+                    差分约束
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.13" data-path="../kth-path.html">
+            
+                <a href="../kth-path.html">
+            
+                    
+                    k短路
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.14" >
+            
+                <span>
+            
+                    
+                    [连通性相关]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.14.1" data-path="../scc.html">
+            
+                <a href="../scc.html">
+            
+                    
+                    强连通分量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.14.2" data-path="../bcc.html">
+            
+                <a href="../bcc.html">
+            
+                    
+                    双联通分量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.14.3" data-path="../bridge.html">
+            
+                <a href="../bridge.html">
+            
+                    
+                    割点和桥
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.14.4" data-path="../2-sat.html">
+            
+                <a href="../2-sat.html">
+            
+                    
+                    2-SAT
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.15" data-path="../euler.html">
+            
+                <a href="../euler.html">
+            
+                    
+                    欧拉图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.16" data-path="../hamilton.html">
+            
+                <a href="../hamilton.html">
+            
+                    
+                    哈密顿图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.17" data-path="../bi-graph.html">
+            
+                <a href="../bi-graph.html">
+            
+                    
+                    二分图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.18" data-path="../min-circle.html">
+            
+                <a href="../min-circle.html">
+            
+                    
+                    最小环
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.19" data-path="../planar.html">
+            
+                <a href="../planar.html">
+            
+                    
+                    平面图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.20" data-path="../color.html">
+            
+                <a href="../color.html">
+            
+                    
+                    图的着色
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.21" data-path="../flow.html">
+            
+                <a href="../flow.html">
+            
+                    
+                    网络流
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.10.21.1" data-path="max-flow.html">
+            
+                <a href="max-flow.html">
+            
+                    
+                    最大流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.21.2" data-path="min-cut.html">
+            
+                <a href="min-cut.html">
+            
+                    
+                    最小割
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.21.3" data-path="min-cost.html">
+            
+                <a href="min-cost.html">
+            
+                    
+                    费用流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.21.4" data-path="bound.html">
+            
+                <a href="bound.html">
+            
+                    
+                    上下界网络流
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.22" data-path="../prufer.html">
+            
+                <a href="../prufer.html">
+            
+                    
+                    Prufer序列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.23" data-path="../lgv.html">
+            
+                <a href="../lgv.html">
+            
+                    
+                    LGV引理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.24" data-path="../misc.html">
+            
+                <a href="../misc.html">
+            
+                    
+                    图论杂项
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../../geometry/">
+            
+                <a href="../../geometry/">
+            
+                    
+                    计算几何
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../../geometry/2d.html">
+            
+                <a href="../../geometry/2d.html">
+            
+                    
+                    二维计算几何
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../../geometry/3d.html">
+            
+                <a href="../../geometry/3d.html">
+            
+                    
+                    三维计算几何
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../../geometry/distance.html">
+            
+                <a href="../../geometry/distance.html">
+            
+                    
+                    距离
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../../geometry/pick.html">
+            
+                <a href="../../geometry/pick.html">
+            
+                    
+                    Pick定理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../../geometry/triangulation.html">
+            
+                <a href="../../geometry/triangulation.html">
+            
+                    
+                    三角剖分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="../../geometry/convex-hull.html">
+            
+                <a href="../../geometry/convex-hull.html">
+            
+                    
+                    凸包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.7" data-path="../../geometry/scanning.html">
+            
+                <a href="../../geometry/scanning.html">
+            
+                    
+                    扫描线
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.8" data-path="../../geometry/rotating-calipers.html">
+            
+                <a href="../../geometry/rotating-calipers.html">
+            
+                    
+                    旋转卡壳
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.9" data-path="../../geometry/half-plane.html">
+            
+                <a href="../../geometry/half-plane.html">
+            
+                    
+                    半平面交
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.10" data-path="../../geometry/nearest-points.html">
+            
+                <a href="../../geometry/nearest-points.html">
+            
+                    
+                    平面最近点对
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.11" data-path="../../geometry/random-incremental.html">
+            
+                <a href="../../geometry/random-incremental.html">
+            
+                    
+                    随机增量法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.12" data-path="../../geometry/inverse.html">
+            
+                <a href="../../geometry/inverse.html">
+            
+                    
+                    反演变换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.13" data-path="../../geometry/misc.html">
+            
+                <a href="../../geometry/misc.html">
+            
+                    
+                    计算几何杂项
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../../misc/">
+            
+                <a href="../../misc/">
+            
+                    
+                    杂项
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../../misc/discrete.html">
+            
+                <a href="../../misc/discrete.html">
+            
+                    
+                    离散化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../../misc/offline.html">
+            
+                <a href="../../misc/offline.html">
+            
+                    
+                    离线算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.2.1" data-path="../../misc/cdq-divide.html">
+            
+                <a href="../../misc/cdq-divide.html">
+            
+                    
+                    CDQ分治
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2.2" data-path="../../misc/parallel-binsearch.html">
+            
+                <a href="../../misc/parallel-binsearch.html">
+            
+                    
+                    整体二分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2.3" data-path="../../misc/mo-algo.html">
+            
+                <a href="../../misc/mo-algo.html">
+            
+                    
+                    莫队算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" >
+            
+                <span>
+            
+                    
+                    [随机化]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.3.1" data-path="../../misc/random.html">
+            
+                <a href="../../misc/random.html">
+            
+                    
+                    随机函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3.2" data-path="../../misc/hill-climbing.html">
+            
+                <a href="../../misc/hill-climbing.html">
+            
+                    
+                    爬山算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3.3" data-path="../../misc/simulated-annealing.html">
+            
+                <a href="../../misc/simulated-annealing.html">
+            
+                    
+                    模拟退火
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../../misc/largest-matrix.html">
+            
+                <a href="../../misc/largest-matrix.html">
+            
+                    
+                    悬线法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="../../misc/cc-basic.html">
+            
+                <a href="../../misc/cc-basic.html">
+            
+                    
+                    计算理论基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="../../misc/josephus.html">
+            
+                <a href="../../misc/josephus.html">
+            
+                    
+                    约瑟夫问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.7" data-path="../../misc/expression.html">
+            
+                <a href="../../misc/expression.html">
+            
+                    
+                    表达式求值
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" >
+            
+                <span>
+            
+                    
+                    [专题]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../../topic/rmq.html">
+            
+                <a href="../../topic/rmq.html">
+            
+                    
+                    RMQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../../topic/problemsetting.html">
+            
+                <a href="../../topic/problemsetting.html">
+            
+                    
+                    出题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >最大流</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x7F51;&#x7EDC;&#x6D41;&#x57FA;&#x672C;&#x6982;&#x5FF5;&#x53C2;&#x89C1; <a href="../flow.html">&#x7F51;&#x7EDC;&#x6D41;&#x7B80;&#x4ECB;</a> </p>
+<h2 id="&#x6982;&#x8FF0;">&#x6982;&#x8FF0;</h2>
+<p>&#x6211;&#x4EEC;&#x6709;&#x4E00;&#x5F20;&#x56FE;&#xFF0C;&#x8981;&#x6C42;&#x4ECE;&#x6E90;&#x70B9;&#x6D41;&#x5411;&#x6C47;&#x70B9;&#x7684;&#x6700;&#x5927;&#x6D41;&#x91CF;&#xFF08;&#x53EF;&#x4EE5;&#x6709;&#x5F88;&#x591A;&#x6761;&#x8DEF;&#x5230;&#x8FBE;&#x6C47;&#x70B9;&#xFF09;&#xFF0C;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x7684;&#x6700;&#x5927;&#x6D41;&#x95EE;&#x9898;&#x3002;</p>
+<h2 id="ford-fulkerson-&#x589E;&#x5E7F;&#x8DEF;&#x7B97;&#x6CD5;">Ford-Fulkerson &#x589E;&#x5E7F;&#x8DEF;&#x7B97;&#x6CD5;</h2>
+<p>&#x8BE5;&#x65B9;&#x6CD5;&#x901A;&#x8FC7;&#x5BFB;&#x627E;&#x589E;&#x5E7F;&#x8DEF;&#x6765;&#x66F4;&#x65B0;&#x6700;&#x5927;&#x6D41;&#xFF0C;&#x6709; EK,dinic,SAP,ISAP &#x4E3B;&#x6D41;&#x7B97;&#x6CD5;&#x3002;</p>
+<p>&#x6C42;&#x89E3;&#x6700;&#x5927;&#x6D41;&#x4E4B;&#x524D;&#xFF0C;&#x6211;&#x4EEC;&#x5148;&#x8BA4;&#x8BC6;&#x4E00;&#x4E9B;&#x6982;&#x5FF5;&#x3002;</p>
+<h3 id="&#x6B8B;&#x91CF;&#x7F51;&#x7EDC;">&#x6B8B;&#x91CF;&#x7F51;&#x7EDC;</h3>
+<p>&#x9996;&#x5148;&#x6211;&#x4EEC;&#x4ECB;&#x7ECD;&#x4E00;&#x4E0B;&#x4E00;&#x6761;&#x8FB9;&#x7684;&#x5269;&#x4F59;&#x5BB9;&#x91CF; $c_f(u,v)$ &#xFF08;Residual Capacity&#xFF09;&#xFF0C;&#x5B83;&#x8868;&#x793A;&#x7684;&#x662F;&#x8FD9;&#x6761;&#x8FB9;&#x7684;&#x5BB9;&#x91CF;&#x4E0E;&#x6D41;&#x91CF;&#x4E4B;&#x5DEE;&#xFF0C;&#x5373; $c_f(u,v)=c(u,v)-f(u,v)$ &#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x6D41;&#x51FD;&#x6570; $f$ &#xFF0C;&#x6B8B;&#x5B58;&#x7F51;&#x7EDC; $G_f$ &#xFF08;Residual Network&#xFF09;&#x662F;&#x7F51;&#x7EDC; $G$ &#x4E2D;&#x6240;&#x6709;&#x7ED3;&#x70B9; <strong>&#x548C;&#x5269;&#x4F59;&#x5BB9;&#x91CF;&#x5927;&#x4E8E; 0</strong> &#x7684;&#x8FB9;&#x6784;&#x6210;&#x7684;&#x5B50;&#x56FE;&#x3002;&#x5F62;&#x5F0F;&#x5316;&#x7684;&#x5B9A;&#x4E49;&#xFF0C;&#x5373; $G_f=(V_f=V,E_f=\left{(u,v)\in E,c_f(u,v)&gt;0\right})$ &#x3002;</p>
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x5269;&#x4F59;&#x5BB9;&#x91CF;&#x5927;&#x4E8E; 0 &#x7684;&#x8FB9;&#x53EF;&#x80FD;&#x4E0D;&#x5728;&#x539F;&#x56FE; $G$ &#x4E2D;&#xFF08;&#x6839;&#x636E;&#x5BB9;&#x91CF;&#x3001;&#x5269;&#x4F59;&#x5BB9;&#x91CF;&#x7684;&#x5B9A;&#x4E49;&#x4EE5;&#x53CA;&#x6D41;&#x51FD;&#x6570;&#x7684;&#x659C;&#x5BF9;&#x79F0;&#x6027;&#x5F97;&#x5230;&#xFF09;&#x3002;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#xFF0C;&#x6B8B;&#x91CF;&#x7F51;&#x7EDC;&#x4E2D;&#x5305;&#x62EC;&#x4E86;&#x90A3;&#x4E9B;&#x8FD8;&#x5269;&#x4E86;&#x6D41;&#x91CF;&#x7A7A;&#x95F4;&#x7684;&#x8FB9;&#x6784;&#x6210;&#x7684;&#x56FE;&#xFF0C;&#x4E5F;&#x5305;&#x62EC;&#x865A;&#x8FB9;&#xFF08;&#x5373;&#x53CD;&#x5411;&#x8FB9;&#xFF09;&#x3002;</p>
+<h3 id="&#x5897;&#x5E7F;&#x8DEF;">&#x5897;&#x5E7F;&#x8DEF;</h3>
+<p>&#x5728;&#x539F;&#x56FE; $G$ &#x4E2D;&#x82E5;&#x4E00;&#x6761;&#x4ECE;&#x6E90;&#x70B9;&#x5230;&#x6C47;&#x70B9;&#x7684;&#x8DEF;&#x5F84;&#x4E0A;&#x6240;&#x6709;&#x8FB9;&#x7684; <strong>&#x5269;&#x4F59;&#x5BB9;&#x91CF;&#x90FD;&#x5927;&#x4E8E; 0</strong> &#xFF0C;&#x8FD9;&#x6761;&#x8DEF;&#x88AB;&#x79F0;&#x4E3A;&#x589E;&#x5E7F;&#x8DEF;&#xFF08;Augmenting Path&#xFF09;&#x3002;</p>
+<p>&#x6216;&#x8005;&#x8BF4;&#xFF0C;&#x5728;&#x6B8B;&#x5B58;&#x7F51;&#x7EDC; $G_f$ &#x4E2D;&#xFF0C;&#x4E00;&#x6761;&#x4ECE;&#x6E90;&#x70B9;&#x5230;&#x6C47;&#x70B9;&#x7684;&#x8DEF;&#x5F84;&#x88AB;&#x79F0;&#x4E3A;&#x589E;&#x5E7F;&#x8DEF;&#x3002;&#x5982;&#x56FE;&#xFF1A;</p>
+<p><img src="images/flow1.png" alt="flow"></p>
+<p>&#x6211;&#x4EEC;&#x4ECE; $4$ &#x5230; $3$ &#xFF0C;&#x80AF;&#x5B9A;&#x53EF;&#x4EE5;&#x5148;&#x4ECE;&#x6D41;&#x91CF;&#x4E3A; $20$ &#x7684;&#x8FD9;&#x6761;&#x8FB9;&#x5148;&#x8D70;&#x3002;&#x90A3;&#x4E48;&#x8FD9;&#x6761;&#x8FB9;&#x5C31;&#x88AB;&#x8D70;&#x6389;&#x4E86;&#xFF0C;&#x4E0D;&#x80FD;&#x518D;&#x9009;&#xFF0C;&#x603B;&#x7684;&#x6D41;&#x91CF;&#x4E3A; $20$ &#xFF08;&#x73B0;&#x5728;&#xFF09;&#x3002;&#x7136;&#x540E;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x9009;&#x62E9;&#xFF1A;</p>
+<ol>
+<li><p>$4\rightarrow2\rightarrow3$ &#x8FD9;&#x6761; <strong>&#x589E;&#x5E7F;&#x8DEF;</strong> &#x7684;&#x603B;&#x6D41;&#x91CF;&#x4E3A; $20$ &#x3002;&#x5230; $2$ &#x7684;&#x65F6;&#x5019;&#x8FD8;&#x662F; $30$ &#xFF0C;&#x5230; $3$ &#x4E86;&#x5C31;&#x53EA;&#x6709; $20$ &#x4E86;&#x3002;</p>
+</li>
+<li><p>$4\rightarrow2\rightarrow1\rightarrow3$ &#x8FD9;&#x6837;&#x5B50;&#x6211;&#x4EEC;&#x5C31;&#x5F88;&#x597D;&#x7684;&#x4FDD;&#x7559;&#x4E86; $30$ &#x7684;&#x6D41;&#x91CF;&#x3002;</p>
+</li>
+</ol>
+<p>&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x8FD9;&#x5F20;&#x56FE;&#x7684;&#x6700;&#x5927;&#x6D41;&#x5C31;&#x5E94;&#x8BE5;&#x662F; $20+30=50$ &#x3002;</p>
+<p>&#x6C42;&#x6700;&#x5927;&#x6D41;&#x662F;&#x5F88;&#x7B80;&#x5355;&#x7684;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x8BB2;&#x89E3;&#x6C42;&#x6700;&#x5927;&#x6D41;&#x7684; 3 &#x79CD;&#x65B9;&#x6CD5;&#x3002;</p>
+<h3 id="edmond-karp-&#x52A8;&#x80FD;&#x7B97;&#x6CD5;&#xFF08;ek-&#x7B97;&#x6CD5;&#xFF09;">Edmond-Karp &#x52A8;&#x80FD;&#x7B97;&#x6CD5;&#xFF08;EK &#x7B97;&#x6CD5;&#xFF09;</h3>
+<p>&#x8FD9;&#x4E2A;&#x7B97;&#x6CD5;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x5C31;&#x662F; BFS <strong>&#x627E;&#x589E;&#x5E7F;&#x8DEF;</strong> &#xFF0C;&#x7136;&#x540E;&#x5BF9;&#x5176;&#x8FDB;&#x884C; <strong>&#x589E;&#x5E7F;</strong> &#x3002;&#x4F60;&#x53EF;&#x80FD;&#x4F1A;&#x95EE;&#xFF0C;&#x600E;&#x4E48;&#x627E;&#xFF1F;&#x600E;&#x4E48;&#x589E;&#x5E7F;&#xFF1F;</p>
+<ol>
+<li><p>&#x627E;&#xFF1F;&#x6211;&#x4EEC;&#x5C31;&#x4ECE;&#x6E90;&#x70B9;&#x4E00;&#x76F4; BFS &#x8D70;&#x6765;&#x8D70;&#x53BB;&#xFF0C;&#x78B0;&#x5230;&#x6C47;&#x70B9;&#x5C31;&#x505C;&#xFF0C;&#x7136;&#x540E;&#x589E;&#x5E7F;&#xFF08;&#x6BCF;&#x4E00;&#x6761;&#x8DEF;&#x90FD;&#x8981;&#x589E;&#x5E7F;&#xFF09;&#x3002;&#x6211;&#x4EEC;&#x5728; BFS &#x7684;&#x65F6;&#x5019;&#x5C31;&#x6CE8;&#x610F;&#x4E00;&#x4E0B;&#x6D41;&#x91CF;&#x5408;&#x4E0D;&#x5408;&#x6CD5;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;</p>
+</li>
+<li><p>&#x589E;&#x5E7F;&#xFF1F;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x6309;&#x7167;&#x6211;&#x4EEC;&#x627E;&#x7684;&#x589E;&#x5E7F;&#x8DEF;&#x5728;&#x91CD;&#x65B0;&#x8D70;&#x4E00;&#x904D;&#x3002;&#x8D70;&#x7684;&#x65F6;&#x5019;&#x628A;&#x8FD9;&#x6761;&#x8DEF;&#x7684;&#x80FD;&#x591F;&#x6210;&#x7684;&#x6700;&#x5927;&#x6D41;&#x91CF;&#x51CF;&#x4E00;&#x51CF;&#xFF0C;&#x7136;&#x540E;&#x7ED9;&#x7B54;&#x6848;&#x52A0;&#x4E0A;&#x6700;&#x5C0F;&#x6D41;&#x91CF;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;</p>
+</li>
+</ol>
+<p>&#x518D;&#x8BB2;&#x4E00;&#x4E0B; <strong>&#x53CD;&#x5411;&#x8FB9;</strong> &#x3002;&#x589E;&#x5E7F;&#x7684;&#x65F6;&#x5019;&#x8981;&#x6CE8;&#x610F;&#x5EFA;&#x9020;&#x53CD;&#x5411;&#x8FB9;&#xFF0C;&#x539F;&#x56E0;&#x662F;&#x8FD9;&#x6761;&#x8DEF;&#x4E0D;&#x4E00;&#x5B9A;&#x662F;&#x6700;&#x4F18;&#x7684;&#xFF0C;&#x8FD9;&#x6837;&#x5B50;&#x7A0B;&#x5E8F;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x53CD;&#x6094;&#x3002;&#x5047;&#x5982;&#x6211;&#x4EEC;&#x5BF9;&#x8FD9;&#x6761;&#x8DEF;&#x8FDB;&#x884C;&#x589E;&#x5E7F;&#x4E86;&#xFF0C;&#x90A3;&#x4E48;&#x5176;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x6761;&#x8FB9;&#x7684;&#x53CD;&#x5411;&#x8FB9;&#x7684;&#x6D41;&#x91CF;&#x5C31;&#x662F;&#x5B83;&#x7684;&#x6D41;&#x91CF;&#x3002;</p>
+<p><img src="images/flow2.png" alt=""></p>
+<p>&#x8BB2;&#x4E00;&#x4E0B;&#x4E00;&#x4E9B;&#x5C0F;&#x7EC6;&#x8282;&#x3002;&#x5982;&#x679C;&#x4F60;&#x662F;&#x7528;&#x90BB;&#x63A5;&#x77E9;&#x9635;&#x7684;&#x8BDD;&#xFF0C;&#x53CD;&#x5411;&#x8FB9;&#x76F4;&#x63A5;&#x5C31;&#x662F;&#x4ECE; $table[x,y]$ &#x53D8;&#x6210; $table[y,x]$ &#x3002;&#x5982;&#x679C;&#x662F;&#x5E38;&#x7528;&#x7684;&#x94FE;&#x5F0F;&#x524D;&#x5411;&#x661F;&#xFF0C;&#x90A3;&#x4E48;&#x5728;&#x52A0;&#x5165;&#x8FB9;&#x7684;&#x65F6;&#x5019;&#x5C31;&#x8981;&#x5148;&#x52A0;&#x5165;&#x53CD;&#x5411;&#x8FB9;&#x3002;&#x90A3;&#x4E48;&#x5728;&#x7528;&#x7684;&#x65F6;&#x5019;&#x5462;&#xFF0C;&#x6211;&#x4EEC;&#x76F4;&#x63A5; $i\operatorname{xor}1$ &#x5C31;&#x53EF;&#x4EE5;&#x4E86; ( $i$ &#x4E3A;&#x8FB9;&#x7684;&#x7F16;&#x53F7;&#xFF09;&#x3002;&#x4E3A;&#x4EC0;&#x4E48;&#x5462;&#xFF1F;&#x76F8;&#x4FE1;&#x5927;&#x5BB6;&#x90FD;&#x662F;&#x77E5;&#x9053; $\operatorname{xor}$ &#x7684;&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x5728;&#x52A0;&#x5165;&#x6B63;&#x5411;&#x8FB9;&#x540E;&#x52A0;&#x5165;&#x53CD;&#x5411;&#x8FB9;&#xFF0C;&#x5C31;&#x662F;&#x9760;&#x8FD1;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; $\operatorname{xor}$ &#x3002;&#x6211;&#x4EEC;&#x8FD8;&#x8981;&#x6CE8;&#x610F;&#x4E00;&#x5F00;&#x59CB;&#x7684;&#x7F16;&#x53F7;&#x8981;&#x8BBE;&#x7F6E;&#x4E3A; $tot=1$ &#xFF0C;&#x56E0;&#x4E3A;&#x8FB9;&#x8981;&#x4ECE;&#x7F16;&#x53F7; $2$ &#x5F00;&#x59CB;&#xFF0C;&#x8FD9;&#x6837;&#x5B50; $\operatorname{xor}$ &#x5BF9;&#x7F16;&#x53F7; $2,3$ &#x7684;&#x8FB9;&#x624D;&#x6709;&#x6548;&#x679C;&#x3002;</p>
+<p>EK &#x7B97;&#x6CD5;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A; $O(nm^2)$ &#xFF08;&#x5176;&#x4E2D; $n$ &#x4E3A;&#x70B9;&#x6570;&#xFF0C; $m$ &#x4E3A;&#x8FB9;&#x6570;&#xFF09;&#x3002;&#x6548;&#x7387;&#x8FD8;&#x6709;&#x5F88;&#x5927;&#x63D0;&#x5347;&#x7A7A;&#x95F4;&#x3002;</p>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> maxn 250</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> INF 0x3f3f3f3f</span>
+
+<span class="hljs-keyword">struct</span> Edge {
+  <span class="hljs-keyword">int</span> from, to, cap, flow;
+  Edge(<span class="hljs-keyword">int</span> u, <span class="hljs-keyword">int</span> v, <span class="hljs-keyword">int</span> c, <span class="hljs-keyword">int</span> f) : from(u), to(v), cap(c), flow(f) {}
+};
+
+<span class="hljs-keyword">struct</span> EK {
+  <span class="hljs-keyword">int</span> n, m;
+  <span class="hljs-built_in">vector</span>&lt;Edge&gt; edges;
+  <span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt; G[maxn];
+  <span class="hljs-keyword">int</span> a[maxn], p[maxn];
+
+  <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">init</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span> </span>{
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) G[i].clear();
+    edges.clear();
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">AddEdge</span><span class="hljs-params">(<span class="hljs-keyword">int</span> from, <span class="hljs-keyword">int</span> to, <span class="hljs-keyword">int</span> cap)</span> </span>{
+    edges.push_back(Edge(from, to, cap, <span class="hljs-number">0</span>));
+    edges.push_back(Edge(to, from, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>));
+    m = edges.size();
+    G[from].push_back(m - <span class="hljs-number">2</span>);
+    G[to].push_back(m - <span class="hljs-number">1</span>);
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">Maxflow</span><span class="hljs-params">(<span class="hljs-keyword">int</span> s, <span class="hljs-keyword">int</span> t)</span> </span>{
+    <span class="hljs-keyword">int</span> flow = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span> (;;) {
+      <span class="hljs-built_in">memset</span>(a, <span class="hljs-number">0</span>, <span class="hljs-keyword">sizeof</span>(a));
+      <span class="hljs-built_in">queue</span>&lt;<span class="hljs-keyword">int</span>&gt; Q;
+      Q.push(s);
+      a[s] = INF;
+      <span class="hljs-keyword">while</span> (!Q.empty()) {
+        <span class="hljs-keyword">int</span> x = Q.front();
+        Q.pop();
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; G[x].size(); i++) {
+          Edge&amp; e = edges[G[x][i]];
+          <span class="hljs-keyword">if</span> (!a[e.to] &amp;&amp; e.cap &gt; e.flow) {
+            p[e.to] = G[x][i];
+            a[e.to] = min(a[x], e.cap - e.flow);
+            Q.push(e.to);
+          }
+        }
+        <span class="hljs-keyword">if</span> (a[t]) <span class="hljs-keyword">break</span>;
+      }
+      <span class="hljs-keyword">if</span> (!a[t]) <span class="hljs-keyword">break</span>;
+      <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> u = t; u != s; u = edges[p[u]].from) {
+        edges[p[u]].flow += a[t];
+        edges[p[u] ^ <span class="hljs-number">1</span>].flow -= a[t];
+      }
+      flow += a[t];
+    }
+    <span class="hljs-keyword">return</span> flow;
+  }
+};
+</code></pre>
+<h3 id="dinic-&#x7B97;&#x6CD5;">Dinic &#x7B97;&#x6CD5;</h3>
+<p> <strong>Dinic &#x7B97;&#x6CD5;</strong> &#x7684;&#x8FC7;&#x7A0B;&#x662F;&#x8FD9;&#x6837;&#x7684;&#xFF1A;&#x6BCF;&#x6B21;&#x589E;&#x5E7F;&#x524D;&#xFF0C;&#x6211;&#x4EEC;&#x5148;&#x7528; BFS &#x6765;&#x5C06;&#x56FE;&#x5206;&#x5C42;&#x3002;&#x8BBE;&#x6E90;&#x70B9;&#x7684;&#x5C42;&#x6570;&#x4E3A; $0$ &#xFF0C;&#x90A3;&#x4E48;&#x4E00;&#x4E2A;&#x70B9;&#x7684;&#x5C42;&#x6570;&#x4FBF;&#x662F;&#x5B83;&#x79BB;&#x6E90;&#x70B9;&#x7684;&#x6700;&#x8FD1;&#x8DDD;&#x79BB;&#x3002;</p>
+<p>&#x901A;&#x8FC7;&#x5206;&#x5C42;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5E72;&#x4E24;&#x4EF6;&#x4E8B;&#x60C5;&#xFF1A;</p>
+<ol>
+<li>&#x5982;&#x679C;&#x4E0D;&#x5B58;&#x5728;&#x5230;&#x6C47;&#x70B9;&#x7684;&#x589E;&#x5E7F;&#x8DEF;&#xFF08;&#x5373;&#x6C47;&#x70B9;&#x7684;&#x5C42;&#x6570;&#x4E0D;&#x5B58;&#x5728;&#xFF09;&#xFF0C;&#x6211;&#x4EEC;&#x5373;&#x53EF;&#x505C;&#x6B62;&#x589E;&#x5E7F;&#x3002;</li>
+<li>&#x786E;&#x4FDD;&#x6211;&#x4EEC;&#x627E;&#x5230;&#x7684;&#x589E;&#x5E7F;&#x8DEF;&#x662F;&#x6700;&#x77ED;&#x7684;&#x3002;&#xFF08;&#x539F;&#x56E0;&#x89C1;&#x4E0B;&#x6587;&#xFF09;</li>
+</ol>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x662F; DFS &#x627E;&#x589E;&#x5E7F;&#x8DEF;&#x7684;&#x8FC7;&#x7A0B;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x6BCF;&#x6B21;&#x627E;&#x589E;&#x5E7F;&#x8DEF;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x90FD;&#x53EA;&#x627E;&#x6BD4;&#x5F53;&#x524D;&#x70B9;&#x5C42;&#x6570;&#x591A; $1$ &#x7684;&#x70B9;&#x8FDB;&#x884C;&#x589E;&#x5E7F;&#xFF08;&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x786E;&#x4FDD;&#x6211;&#x4EEC;&#x627E;&#x5230;&#x7684;&#x589E;&#x5E7F;&#x8DEF;&#x662F;&#x6700;&#x77ED;&#x7684;&#xFF09;&#x3002;</p>
+<p>Dinic &#x7B97;&#x6CD5;&#x6709;&#x4E24;&#x4E2A;&#x4F18;&#x5316;&#xFF1A;</p>
+<ol>
+<li><strong>&#x591A;&#x8DEF;&#x589E;&#x5E7F;</strong> &#xFF1A;&#x6BCF;&#x6B21;&#x627E;&#x5230;&#x4E00;&#x6761;&#x589E;&#x5E7F;&#x8DEF;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5982;&#x679C;&#x6B8B;&#x4F59;&#x6D41;&#x91CF;&#x6CA1;&#x6709;&#x7528;&#x5B8C;&#x600E;&#x4E48;&#x529E;&#x5462;&#xFF1F;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x6B8B;&#x4F59;&#x90E8;&#x5206;&#x6D41;&#x91CF;&#xFF0C;&#x518D;&#x627E;&#x51FA;&#x4E00;&#x6761;&#x589E;&#x5E7F;&#x8DEF;&#x3002;&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x5728;&#x4E00;&#x6B21; DFS &#x4E2D;&#x627E;&#x51FA;&#x591A;&#x6761;&#x589E;&#x5E7F;&#x8DEF;&#xFF0C;&#x5927;&#x5927;&#x63D0;&#x9AD8;&#x4E86;&#x7B97;&#x6CD5;&#x7684;&#x6548;&#x7387;&#x3002;</li>
+<li><strong>&#x5F53;&#x524D;&#x5F27;&#x4F18;&#x5316;</strong> &#xFF1A;&#x5982;&#x679C;&#x4E00;&#x6761;&#x8FB9;&#x5DF2;&#x7ECF;&#x88AB;&#x589E;&#x5E7F;&#x8FC7;&#xFF0C;&#x90A3;&#x4E48;&#x5B83;&#x5C31;&#x6CA1;&#x6709;&#x53EF;&#x80FD;&#x88AB;&#x589E;&#x5E7F;&#x7B2C;&#x4E8C;&#x6B21;&#x3002;&#x90A3;&#x4E48;&#xFF0C;&#x6211;&#x4EEC;&#x4E0B;&#x4E00;&#x6B21;&#x8FDB;&#x884C;&#x589E;&#x5E7F;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x4E0D;&#x5FC5;&#x518D;&#x8D70;&#x90A3;&#x4E9B;&#x5DF2;&#x7ECF;&#x88AB;&#x589E;&#x5E7F;&#x8FC7;&#x7684;&#x8FB9;&#x3002;</li>
+</ol>
+<p>&#x8BBE;&#x70B9;&#x6570;&#x4E3A; $n$ &#xFF0C;&#x8FB9;&#x6570;&#x4E3A; $m$ &#xFF0C;&#x90A3;&#x4E48; Dinic &#x7B97;&#x6CD5;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x662F; $O(n^{2}m)$ &#xFF0C;&#x5728;&#x7A00;&#x758F;&#x56FE;&#x4E0A;&#x6548;&#x7387;&#x548C; EK &#x7B97;&#x6CD5;&#x76F8;&#x5F53;&#xFF0C;&#x4F46;&#x5728;&#x7A20;&#x5BC6;&#x56FE;&#x4E0A;&#x6548;&#x7387;&#x8981;&#x6BD4; EK &#x7B97;&#x6CD5;&#x9AD8;&#x5F88;&#x591A;&#x3002;</p>
+<p>&#x7279;&#x522B;&#x5730;&#xFF0C;&#x5728;&#x6C42;&#x89E3;&#x4E8C;&#x5206;&#x56FE;&#x6700;&#x5927;&#x5339;&#x914D;&#x95EE;&#x9898;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x8BC1;&#x660E; Dinic &#x7B97;&#x6CD5;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x662F; $O(m\sqrt{n})$ &#x3002;</p>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> maxn 250</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> INF 0x3f3f3f3f</span>
+
+<span class="hljs-keyword">struct</span> Edge {
+  <span class="hljs-keyword">int</span> from, to, cap, flow;
+  Edge(<span class="hljs-keyword">int</span> u, <span class="hljs-keyword">int</span> v, <span class="hljs-keyword">int</span> c, <span class="hljs-keyword">int</span> f) : from(u), to(v), cap(c), flow(f) {}
+};
+
+<span class="hljs-keyword">struct</span> Dinic {
+  <span class="hljs-keyword">int</span> n, m, s, t;
+  <span class="hljs-built_in">vector</span>&lt;Edge&gt; edges;
+  <span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt; G[maxn];
+  <span class="hljs-keyword">int</span> d[maxn], cur[maxn];
+  <span class="hljs-keyword">bool</span> vis[maxn];
+
+  <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">init</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span> </span>{
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) G[i].clear();
+    edges.clear();
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">AddEdge</span><span class="hljs-params">(<span class="hljs-keyword">int</span> from, <span class="hljs-keyword">int</span> to, <span class="hljs-keyword">int</span> cap)</span> </span>{
+    edges.push_back(Edge(from, to, cap, <span class="hljs-number">0</span>));
+    edges.push_back(Edge(to, from, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>));
+    m = edges.size();
+    G[from].push_back(m - <span class="hljs-number">2</span>);
+    G[to].push_back(m - <span class="hljs-number">1</span>);
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">BFS</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-built_in">memset</span>(vis, <span class="hljs-number">0</span>, <span class="hljs-keyword">sizeof</span>(vis));
+    <span class="hljs-built_in">queue</span>&lt;<span class="hljs-keyword">int</span>&gt; Q;
+    Q.push(s);
+    d[s] = <span class="hljs-number">0</span>;
+    vis[s] = <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">while</span> (!Q.empty()) {
+      <span class="hljs-keyword">int</span> x = Q.front();
+      Q.pop();
+      <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; G[x].size(); i++) {
+        Edge&amp; e = edges[G[x][i]];
+        <span class="hljs-keyword">if</span> (!vis[e.to] &amp;&amp; e.cap &gt; e.flow) {
+          vis[e.to] = <span class="hljs-number">1</span>;
+          d[e.to] = d[x] + <span class="hljs-number">1</span>;
+          Q.push(e.to);
+        }
+      }
+    }
+    <span class="hljs-keyword">return</span> vis[t];
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">DFS</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> a)</span> </span>{
+    <span class="hljs-keyword">if</span> (x == t || a == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> a;
+    <span class="hljs-keyword">int</span> flow = <span class="hljs-number">0</span>, f;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span>&amp; i = cur[x]; i &lt; G[x].size(); i++) {
+      Edge&amp; e = edges[G[x][i]];
+      <span class="hljs-keyword">if</span> (d[x] + <span class="hljs-number">1</span> == d[e.to] &amp;&amp; (f = DFS(e.to, min(a, e.cap - e.flow))) &gt; <span class="hljs-number">0</span>) {
+        e.flow += f;
+        edges[G[x][i] ^ <span class="hljs-number">1</span>].flow -= f;
+        flow += f;
+        a -= f;
+        <span class="hljs-keyword">if</span> (a == <span class="hljs-number">0</span>) <span class="hljs-keyword">break</span>;
+      }
+    }
+    <span class="hljs-keyword">return</span> flow;
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">Maxflow</span><span class="hljs-params">(<span class="hljs-keyword">int</span> s, <span class="hljs-keyword">int</span> t)</span> </span>{
+    <span class="hljs-keyword">this</span>-&gt;s = s;
+    <span class="hljs-keyword">this</span>-&gt;t = t;
+    <span class="hljs-keyword">int</span> flow = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">while</span> (BFS()) {
+      <span class="hljs-built_in">memset</span>(cur, <span class="hljs-number">0</span>, <span class="hljs-keyword">sizeof</span>(cur));
+      flow += DFS(s, INF);
+    }
+    <span class="hljs-keyword">return</span> flow;
+  }
+};
+</code></pre>
+<h3 id="isap">ISAP</h3>
+<p>&#x8FD9;&#x4E2A;&#x662F; SAP &#x7B97;&#x6CD5;&#x7684;&#x52A0;&#x5F3A;&#x7248; (Improved)&#x3002;</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">struct</span> Edge {
+  <span class="hljs-keyword">int</span> from, to, cap, flow;
+  Edge(<span class="hljs-keyword">int</span> u, <span class="hljs-keyword">int</span> v, <span class="hljs-keyword">int</span> c, <span class="hljs-keyword">int</span> f) : from(u), to(v), cap(c), flow(f) {}
+};
+
+<span class="hljs-keyword">bool</span> <span class="hljs-keyword">operator</span>&lt;(<span class="hljs-keyword">const</span> Edge&amp; a, <span class="hljs-keyword">const</span> Edge&amp; b) {
+  <span class="hljs-keyword">return</span> a.from &lt; b.from || (a.from == b.from &amp;&amp; a.to &lt; b.to);
+}
+
+<span class="hljs-keyword">struct</span> ISAP {
+  <span class="hljs-keyword">int</span> n, m, s, t;
+  <span class="hljs-built_in">vector</span>&lt;Edge&gt; edges;
+  <span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt; G[maxn];
+  <span class="hljs-keyword">bool</span> vis[maxn];
+  <span class="hljs-keyword">int</span> d[maxn];
+  <span class="hljs-keyword">int</span> cur[maxn];
+  <span class="hljs-keyword">int</span> p[maxn];
+  <span class="hljs-keyword">int</span> num[maxn];
+
+  <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">AddEdge</span><span class="hljs-params">(<span class="hljs-keyword">int</span> from, <span class="hljs-keyword">int</span> to, <span class="hljs-keyword">int</span> cap)</span> </span>{
+    edges.push_back(Edge(from, to, cap, <span class="hljs-number">0</span>));
+    edges.push_back(Edge(to, from, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>));
+    m = edges.size();
+    G[from].push_back(m - <span class="hljs-number">2</span>);
+    G[to].push_back(m - <span class="hljs-number">1</span>);
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">BFS</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-built_in">memset</span>(vis, <span class="hljs-number">0</span>, <span class="hljs-keyword">sizeof</span>(vis));
+    <span class="hljs-built_in">queue</span>&lt;<span class="hljs-keyword">int</span>&gt; Q;
+    Q.push(t);
+    vis[t] = <span class="hljs-number">1</span>;
+    d[t] = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">while</span> (!Q.empty()) {
+      <span class="hljs-keyword">int</span> x = Q.front();
+      Q.pop();
+      <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; G[x].size(); i++) {
+        Edge&amp; e = edges[G[x][i] ^ <span class="hljs-number">1</span>];
+        <span class="hljs-keyword">if</span> (!vis[e.from] &amp;&amp; e.cap &gt; e.flow) {
+          vis[e.from] = <span class="hljs-number">1</span>;
+          d[e.from] = d[x] + <span class="hljs-number">1</span>;
+          Q.push(e.from);
+        }
+      }
+    }
+    <span class="hljs-keyword">return</span> vis[s];
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">init</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span> </span>{
+    <span class="hljs-keyword">this</span>-&gt;n = n;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) G[i].clear();
+    edges.clear();
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">Augment</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">int</span> x = t, a = INF;
+    <span class="hljs-keyword">while</span> (x != s) {
+      Edge&amp; e = edges[p[x]];
+      a = min(a, e.cap - e.flow);
+      x = edges[p[x]].from;
+    }
+    x = t;
+    <span class="hljs-keyword">while</span> (x != s) {
+      edges[p[x]].flow += a;
+      edges[p[x] ^ <span class="hljs-number">1</span>].flow -= a;
+      x = edges[p[x]].from;
+    }
+    <span class="hljs-keyword">return</span> a;
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">Maxflow</span><span class="hljs-params">(<span class="hljs-keyword">int</span> s, <span class="hljs-keyword">int</span> t)</span> </span>{
+    <span class="hljs-keyword">this</span>-&gt;s = s;
+    <span class="hljs-keyword">this</span>-&gt;t = t;
+    <span class="hljs-keyword">int</span> flow = <span class="hljs-number">0</span>;
+    BFS();
+    <span class="hljs-built_in">memset</span>(num, <span class="hljs-number">0</span>, <span class="hljs-keyword">sizeof</span>(num));
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) num[d[i]]++;
+    <span class="hljs-keyword">int</span> x = s;
+    <span class="hljs-built_in">memset</span>(cur, <span class="hljs-number">0</span>, <span class="hljs-keyword">sizeof</span>(cur));
+    <span class="hljs-keyword">while</span> (d[s] &lt; n) {
+      <span class="hljs-keyword">if</span> (x == t) {
+        flow += Augment();
+        x = s;
+      }
+      <span class="hljs-keyword">int</span> ok = <span class="hljs-number">0</span>;
+      <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = cur[x]; i &lt; G[x].size(); i++) {
+        Edge&amp; e = edges[G[x][i]];
+        <span class="hljs-keyword">if</span> (e.cap &gt; e.flow &amp;&amp; d[x] == d[e.to] + <span class="hljs-number">1</span>) {
+          ok = <span class="hljs-number">1</span>;
+          p[e.to] = G[x][i];
+          cur[x] = i;
+          x = e.to;
+          <span class="hljs-keyword">break</span>;
+        }
+      }
+      <span class="hljs-keyword">if</span> (!ok) {
+        <span class="hljs-keyword">int</span> m = n - <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; G[x].size(); i++) {
+          Edge&amp; e = edges[G[x][i]];
+          <span class="hljs-keyword">if</span> (e.cap &gt; e.flow) m = min(m, d[e.to]);
+        }
+        <span class="hljs-keyword">if</span> (--num[d[x]] == <span class="hljs-number">0</span>) <span class="hljs-keyword">break</span>;
+        num[d[x] = m + <span class="hljs-number">1</span>]++;
+        cur[x] = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">if</span> (x != s) x = edges[p[x]].from;
+      }
+    }
+    <span class="hljs-keyword">return</span> flow;
+  }
+};
+</code></pre>
+<h2 id="push-relabel-&#x9884;&#x6D41;&#x63A8;&#x8FDB;&#x7B97;&#x6CD5;">Push-Relabel &#x9884;&#x6D41;&#x63A8;&#x8FDB;&#x7B97;&#x6CD5;</h2>
+<p>&#x8BE5;&#x65B9;&#x6CD5;&#x5728;&#x6C42;&#x89E3;&#x8FC7;&#x7A0B;&#x4E2D;&#x5FFD;&#x7565;&#x6D41;&#x5B88;&#x6052;&#x6027;&#xFF0C;&#x5E76;&#x6BCF;&#x6B21;&#x5BF9;&#x4E00;&#x4E2A;&#x7ED3;&#x70B9;&#x66F4;&#x65B0;&#x4FE1;&#x606F;&#xFF0C;&#x4EE5;&#x6C42;&#x89E3;&#x6700;&#x5927;&#x6D41;&#x3002;</p>
+<h3 id="&#x901A;&#x7528;&#x7684;&#x9884;&#x6D41;&#x63A8;&#x8FDB;&#x7B97;&#x6CD5;">&#x901A;&#x7528;&#x7684;&#x9884;&#x6D41;&#x63A8;&#x8FDB;&#x7B97;&#x6CD5;</h3>
+<p>&#x9996;&#x5148;&#x6211;&#x4EEC;&#x4ECB;&#x7ECD;&#x9884;&#x6D41;&#x63A8;&#x8FDB;&#x7B97;&#x6CD5;&#x7684;&#x4E3B;&#x8981;&#x601D;&#x60F3;&#xFF0C;&#x4EE5;&#x53CA;&#x4E00;&#x4E2A;&#x53EF;&#x884C;&#x7684;&#x66B4;&#x529B;&#x5B9E;&#x73B0;&#x7B97;&#x6CD5;&#x3002;</p>
+<p>&#x9884;&#x6D41;&#x63A8;&#x8FDB;&#x7B97;&#x6CD5;&#x901A;&#x8FC7;&#x5BF9;&#x5355;&#x4E2A;&#x7ED3;&#x70B9;&#x7684;&#x66F4;&#x65B0;&#x64CD;&#x4F5C;&#xFF0C;&#x76F4;&#x5230;&#x6CA1;&#x6709;&#x7ED3;&#x70B9;&#x9700;&#x8981;&#x66F4;&#x65B0;&#x6765;&#x6C42;&#x89E3;&#x6700;&#x5927;&#x6D41;&#x3002;</p>
+<p>&#x7B97;&#x6CD5;&#x8FC7;&#x7A0B;&#x7EF4;&#x62A4;&#x7684;&#x6D41;&#x51FD;&#x6570;&#x4E0D;&#x4E00;&#x5B9A;&#x4FDD;&#x6301;&#x6D41;&#x5B88;&#x6052;&#x6027;&#xFF0C;&#x5BF9;&#x4E8E;&#x4E00;&#x4E2A;&#x7ED3;&#x70B9;&#xFF0C;&#x6211;&#x4EEC;&#x5141;&#x8BB8;&#x8FDB;&#x5165;&#x7ED3;&#x70B9;&#x7684;&#x6D41;&#x8D85;&#x8FC7;&#x6D41;&#x51FA;&#x7ED3;&#x70B9;&#x7684;&#x6D41;&#xFF0C;&#x8D85;&#x8FC7;&#x7684;&#x90E8;&#x5206;&#x88AB;&#x79F0;&#x4E3A;&#x7ED3;&#x70B9; $u(u\in V-{s,t})$ &#x7684; <strong>&#x8D85;&#x989D;&#x6D41;</strong>  $e(u)$ &#xFF1A;</p>
+<p>$$
+e(u)=\sum<em>{(x,u)\in E}f(x,u)-\sum</em>{(u,y)\in E}f(u,y)</p>
+<p>$$</p>
+<p>&#x82E5; $e(u)&gt;0$ &#xFF0C;&#x79F0;&#x7ED3;&#x70B9; $u$  <strong>&#x6EA2;&#x51FA;</strong> &#x3002;</p>
+<p>&#x9884;&#x6D41;&#x63A8;&#x8FDB;&#x7B97;&#x6CD5;&#x7EF4;&#x62A4;&#x6BCF;&#x4E2A;&#x7ED3;&#x70B9;&#x7684;&#x9AD8;&#x5EA6; $h(u)$ &#xFF0C;&#x5E76;&#x4E14;&#x89C4;&#x5B9A;&#x6EA2;&#x51FA;&#x7684;&#x7ED3;&#x70B9; $u$ &#x5982;&#x679C;&#x8981;&#x63A8;&#x9001;&#x8D85;&#x989D;&#x6D41;&#xFF0C;&#x53EA;&#x80FD;&#x5411;&#x9AD8;&#x5EA6;&#x5C0F;&#x4E8E; $u$ &#x7684;&#x7ED3;&#x70B9;&#x63A8;&#x9001;&#xFF1B;&#x5982;&#x679C; $u$ &#x6CA1;&#x6709;&#x76F8;&#x90BB;&#x7684;&#x9AD8;&#x5EA6;&#x5C0F;&#x4E8E; $u$ &#x7684;&#x7ED3;&#x70B9;&#xFF0C;&#x5C31;&#x4FEE;&#x6539; $u$ &#x7684;&#x9AD8;&#x5EA6;&#xFF08;&#x91CD;&#x8D34;&#x6807;&#x7B7E;&#xFF09;&#x3002;</p>
+<h4 id="&#x9AD8;&#x5EA6;&#x51FD;&#x6570;">&#x9AD8;&#x5EA6;&#x51FD;&#x6570;</h4>
+<p>&#x51C6;&#x786E;&#x5730;&#x8BF4;&#xFF0C;&#x9884;&#x6D41;&#x63A8;&#x8FDB;&#x7EF4;&#x62A4;&#x4EE5;&#x4E0B;&#x7684;&#x4E00;&#x4E2A;&#x6620;&#x5C04; $h:V\to \mathbf{N}$ &#xFF1A;</p>
+<ul>
+<li>$h(s)=|V|,h(t)=0$ </li>
+<li>$\forall (u,v)\in E_f,h(u)\leq h(v)+1$ </li>
+</ul>
+<p>&#x79F0; $h$ &#x662F;&#x6B8B;&#x5B58;&#x7F51;&#x7EDC; $G_f=(V_f,E_f)$ &#x7684;&#x9AD8;&#x5EA6;&#x51FD;&#x6570;&#x3002;</p>
+<p>&#x5F15;&#x7406; 1&#xFF1A;&#x8BBE; $G_f$ &#x4E0A;&#x7684;&#x9AD8;&#x5EA6;&#x51FD;&#x6570;&#x4E3A; $h$ &#xFF0C;&#x5BF9;&#x4E8E;&#x4EFB;&#x610F;&#x4E24;&#x4E2A;&#x7ED3;&#x70B9; $u,v\in V$ &#xFF0C;&#x5982;&#x679C; $h(u)&gt;h(v)+1$ &#xFF0C;&#x5219; $(u,v)$ &#x4E0D;&#x662F; $G_f$ &#x4E2D;&#x7684;&#x8FB9;&#x3002;</p>
+<p>&#x7B97;&#x6CD5;&#x53EA;&#x4F1A;&#x5728; $h(u)=h(v)+1$ &#x7684;&#x8FB9;&#x6267;&#x884C;&#x63A8;&#x9001;&#x3002;</p>
+<h4 id="&#x63A8;&#x9001;&#xFF08;push&#xFF09;">&#x63A8;&#x9001;&#xFF08;Push&#xFF09;</h4>
+<p>&#x9002;&#x7528;&#x6761;&#x4EF6;&#xFF1A;&#x7ED3;&#x70B9; $u$ &#x6EA2;&#x51FA;&#xFF0C;&#x4E14;&#x5B58;&#x5728;&#x7ED3;&#x70B9; $v((u,v)\in E_f,c(u,v)-f(u,v)&gt;0,h(u)=h(v)+1)$ &#xFF0C;&#x5219; push &#x64CD;&#x4F5C;&#x9002;&#x7528;&#x4E8E; $(u,v)$ &#x3002;</p>
+<p>&#x4E8E;&#x662F;&#xFF0C;&#x6211;&#x4EEC;&#x5C3D;&#x53EF;&#x80FD;&#x5C06;&#x8D85;&#x989D;&#x6D41;&#x4ECE; $u$ &#x63A8;&#x9001;&#x5230; $v$ &#xFF0C;&#x63A8;&#x9001;&#x8FC7;&#x7A0B;&#x4E2D;&#x6211;&#x4EEC;&#x53EA;&#x5173;&#x5FC3;&#x8D85;&#x989D;&#x6D41;&#x548C; $c(u,v)-f(u,v)$ &#x7684;&#x6700;&#x5C0F;&#x503C;&#xFF0C;&#x4E0D;&#x5173;&#x5FC3; $v$ &#x662F;&#x5426;&#x6EA2;&#x51FA;&#x3002;</p>
+<p>&#x5982;&#x679C; $(u,v)$ &#x5728;&#x63A8;&#x9001;&#x5B8C;&#x4E4B;&#x540E;&#x6EE1;&#x6D41;&#xFF0C;&#x5C06;&#x5176;&#x4ECE;&#x6B8B;&#x5B58;&#x7F51;&#x7EDC;&#x4E2D;&#x5220;&#x9664;&#x3002;</p>
+<h4 id="&#x91CD;&#x8D34;&#x6807;&#x7B7E;&#xFF08;relabel&#xFF09;">&#x91CD;&#x8D34;&#x6807;&#x7B7E;&#xFF08;Relabel&#xFF09;</h4>
+<p>&#x9002;&#x7528;&#x6761;&#x4EF6;&#xFF1A;&#x5982;&#x679C;&#x7ED3;&#x70B9; $u$ &#x6EA2;&#x51FA;&#xFF0C;&#x4E14; $\forall (u,v)\in E_f,h(u)\leq h(v)$ &#xFF0C;&#x5219; relabel &#x64CD;&#x4F5C;&#x9002;&#x7528;&#x4E8E; $u$ &#x3002;</p>
+<p>&#x5219;&#x5C06; $h(u)$ &#x66F4;&#x65B0;&#x4E3A; $min_{(u,v)\in E_f}h(v)+1$ &#x5373;&#x53EF;&#x3002;</p>
+<h4 id="&#x521D;&#x59CB;&#x5316;">&#x521D;&#x59CB;&#x5316;</h4>
+<p>$$
+\begin{split}
+&amp;\forall (u,v)\in E,&amp;f(u,v)=\left{\begin{split}
+&amp;c(u,v)&amp;,u=s\
+&amp;0&amp;,u\neq s\
+\end{split}\right.
+\
+&amp;\forall u\in V,&amp;h(u)=\left{\begin{split}
+&amp;|V|&amp;,u=s\
+&amp;0&amp;,u\neq s\
+\end{split}\right.
+,e(u)=\sum<em>{(x,u)\in E}f(x,u)-\sum</em>{(u,y)\in E}f(u,y)
+\end{split}</p>
+<p>$$</p>
+<p>&#x4E0A;&#x8FF0;&#x5C06; $(s,v)\in E$ &#x5145;&#x6EE1;&#x6D41;&#xFF0C;&#x5E76;&#x5C06; $h(s)$ &#x62AC;&#x9AD8;&#xFF0C;&#x4F7F;&#x5F97; $(s,v)\notin E<em>f$ &#xFF0C;&#x56E0;&#x4E3A; $h(s)&gt;h(v)$ &#xFF0C;&#x800C;&#x4E14; $(s,v)$ &#x6BD5;&#x7ADF;&#x6EE1;&#x6D41;&#xFF0C;&#x6CA1;&#x5FC5;&#x8981;&#x7559;&#x5728;&#x6B8B;&#x5B58;&#x7F51;&#x7EDC;&#x4E2D;&#xFF1B;&#x4E0A;&#x8FF0;&#x8FD8;&#x5C06; $e(s)$ &#x521D;&#x59CB;&#x5316;&#x4E3A; $\sum</em>{(s,v)\in E}f(s,v)$ &#x7684;&#x76F8;&#x53CD;&#x6570;&#x3002;</p>
+<h4 id="&#x901A;&#x7528;&#x7B97;&#x6CD5;">&#x901A;&#x7528;&#x7B97;&#x6CD5;</h4>
+<p>&#x6211;&#x4EEC;&#x6BCF;&#x6B21;&#x626B;&#x63CF;&#x6574;&#x4E2A;&#x56FE;&#xFF0C;&#x53EA;&#x8981;&#x5B58;&#x5728;&#x7ED3;&#x70B9; $u$ &#x6EE1;&#x8DB3; push &#x6216; relabel &#x64CD;&#x4F5C;&#x7684;&#x6761;&#x4EF6;&#xFF0C;&#x5C31;&#x6267;&#x884C;&#x5BF9;&#x5E94;&#x7684;&#x64CD;&#x4F5C;&#x3002;</p>
+<p>&#x5982;&#x56FE;&#xFF0C;&#x6BCF;&#x4E2A;&#x7ED3;&#x70B9;&#x4E2D;&#x95F4;&#x8868;&#x793A;&#x7F16;&#x53F7;&#xFF0C;&#x5DE6;&#x4E0B;&#x8868;&#x793A;&#x9AD8;&#x5EA6;&#x503C; $h(u)$ &#xFF0C;&#x53F3;&#x4E0B;&#x8868;&#x793A;&#x8D85;&#x989D;&#x6D41; $e(u)$ &#xFF0C;&#x7ED3;&#x70B9;&#x989C;&#x8272;&#x7684;&#x6DF1;&#x5EA6;&#x4E5F;&#x8868;&#x793A;&#x7ED3;&#x70B9;&#x7684;&#x9AD8;&#x5EA6;&#xFF1B;&#x8FB9;&#x6743;&#x8868;&#x793A; $c(u,v)-f(u,v)$ &#xFF0C;&#x7EFF;&#x8272;&#x7684;&#x8FB9;&#x8868;&#x793A;&#x6EE1;&#x8DB3; $h(u)=h(v)+1$ &#x7684;&#x8FB9; $(u,v)$ &#xFF08;&#x5373;&#x6B8B;&#x5B58;&#x7F51;&#x7EDC;&#x7684;&#x8FB9; $E_f$ &#xFF09;&#xFF1A;</p>
+<p><img src="images/2148.png" alt="p1"></p>
+<p>&#x6574;&#x4E2A;&#x7B97;&#x6CD5;&#x6211;&#x4EEC;&#x5927;&#x81F4;&#x6D4F;&#x89C8;&#x4E00;&#x4E0B;&#x8FC7;&#x7A0B;&#xFF0C;&#x8FD9;&#x91CC;&#x7B14;&#x8005;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x66B4;&#x529B;&#x7B97;&#x6CD5;&#xFF0C;&#x5373;&#x66B4;&#x529B;&#x626B;&#x63CF;&#x662F;&#x5426;&#x6709;&#x6EA2;&#x51FA;&#x7684;&#x7ED3;&#x70B9;&#xFF0C;&#x6709;&#x5C31;&#x66F4;&#x65B0;</p>
+<p><img src="images/2149.gif" alt="p2"></p>
+<p>&#x6700;&#x540E;&#x7684;&#x7ED3;&#x679C;</p>
+<p><img src="images/2150.png" alt="p3"></p>
+<p>&#x53EF;&#x4EE5;&#x53D1;&#x73B0;&#xFF0C;&#x6700;&#x540E;&#x7684;&#x8D85;&#x989D;&#x6D41;&#x4E00;&#x90E8;&#x5206;&#x56DE;&#x5230;&#x4E86; $s$ &#xFF0C;&#x4E14;&#x9664;&#x4E86;&#x6E90;&#x70B9;&#x6C47;&#x70B9;&#xFF0C;&#x5176;&#x4ED6;&#x7ED3;&#x70B9;&#x90FD;&#x6CA1;&#x6709;&#x6EA2;&#x51FA;&#xFF1B;&#x8FD9;&#x65F6;&#x7684;&#x6D41;&#x51FD;&#x6570; $f$ &#x6EE1;&#x8DB3;&#x6D41;&#x5B88;&#x6052;&#x6027;&#xFF0C;&#x4E3A;&#x6700;&#x5927;&#x6D41;&#xFF0C;&#x5373; $e(t)$ &#x3002;</p>
+<p>???+ &quot;&#x6838;&#x5FC3;&#x4EE3;&#x7801;&quot;</p>
+<pre><code>```cpp
+const int N = 1e4 + 4, M = 1e5 + 5, INF = 0x3f3f3f3f;
+int n, m, s, t, maxflow, tot;
+int ht[N], ex[N];
+void init() {  // &#x521D;&#x59CB;&#x5316;
+  for (int i = h[s]; i; i = e[i].nex) {
+    const int &amp;v = e[i].t;
+    ex[v] = e[i].v, ex[s] -= ex[v], e[i ^ 1].v = e[i].v, e[i].v = 0;
+  }
+  ht[s] = n;
+}
+bool push(int ed) {
+  const int &amp;u = e[ed ^ 1].t, &amp;v = e[ed].t;
+  int flow = min(ex[u], e[ed].v);
+  ex[u] -= flow, ex[v] += flow, e[ed].v -= flow, e[ed ^ 1].v += flow;
+  return ex[u];  // &#x5982;&#x679C; u &#x4ECD;&#x6EA2;&#x51FA;&#xFF0C;&#x8FD4;&#x56DE; 1
+}
+void relabel(int u) {
+  ht[u] = INF;
+  for (int i = h[u]; i; i = e[i].nex)
+    if (e[i].v) ht[u] = min(ht[u], ht[e[i].t]);
+  ++ht[u];
+}
+```
+</code></pre><h3 id="hlpp-&#x7B97;&#x6CD5;">HLPP &#x7B97;&#x6CD5;</h3>
+<p>&#x6700;&#x9AD8;&#x6807;&#x53F7;&#x9884;&#x6D41;&#x63A8;&#x8FDB;&#x7B97;&#x6CD5;&#xFF08;High Level Preflow Push&#xFF09;&#x662F;&#x57FA;&#x4E8E;&#x9884;&#x6D41;&#x63A8;&#x8FDB;&#x7B97;&#x6CD5;&#x7684;&#x4F18;&#x5148;&#x961F;&#x5217;&#x5B9E;&#x73B0;&#xFF0C;&#x8BE5;&#x7B97;&#x6CD5;&#x4F18;&#x5148;&#x63A8;&#x9001;&#x9AD8;&#x5EA6;&#x9AD8;&#x7684;&#x6EA2;&#x51FA;&#x7684;&#x7ED3;&#x70B9;&#xFF0C;&#x7B97;&#x6CD5;&#x7B97;&#x6CD5;&#x590D;&#x6742;&#x5EA6; $O(n^2\sqrt m)$ &#x3002;</p>
+<p>&#x5177;&#x4F53;&#x5730;&#x8BF4;&#xFF0C;HLPP &#x7B97;&#x6CD5;&#x8FC7;&#x7A0B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ol>
+<li>&#x521D;&#x59CB;&#x5316;&#xFF08;&#x57FA;&#x4E8E;&#x9884;&#x6D41;&#x63A8;&#x8FDB;&#x7B97;&#x6CD5;&#xFF09;&#xFF1B;</li>
+<li>&#x9009;&#x62E9;&#x6EA2;&#x51FA;&#x7ED3;&#x70B9;&#xFF08;&#x9664; $s,t$ &#xFF09;&#x4E2D;&#x9AD8;&#x5EA6;&#x6700;&#x9AD8;&#x7684;&#x7ED3;&#x70B9; $u$ &#xFF0C;&#x5E76;&#x5BF9;&#x5B83;&#x6240;&#x6709;&#x53EF;&#x4EE5;&#x63A8;&#x9001;&#x7684;&#x8FB9;&#x8FDB;&#x884C;&#x63A8;&#x9001;&#xFF1B;</li>
+<li>&#x5982;&#x679C; $u$ &#x4ECD;&#x6EA2;&#x51FA;&#xFF0C;&#x5BF9;&#x5B83;&#x91CD;&#x8D34;&#x6807;&#x7B7E;&#xFF0C;&#x56DE;&#x5230;&#x6B65;&#x9AA4; 2&#xFF1B;</li>
+<li>&#x5982;&#x679C;&#x6CA1;&#x6709;&#x6EA2;&#x51FA;&#x7684;&#x7ED3;&#x70B9;&#xFF0C;&#x7B97;&#x6CD5;&#x7ED3;&#x675F;&#x3002;</li>
+</ol>
+<h4 id="bfs-&#x4F18;&#x5316;">BFS &#x4F18;&#x5316;</h4>
+<p>HLPP &#x7684;&#x4E0A;&#x754C;&#x4E3A; $O(n^2\sqrt m)$ &#xFF0C;&#x4F46;&#x5728;&#x4F7F;&#x7528;&#x65F6;&#x5361;&#x5F97;&#x6BD4;&#x8F83;&#x7D27;&#xFF1B;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x521D;&#x59CB;&#x5316;&#x9AD8;&#x5EA6;&#x7684;&#x65F6;&#x5019;&#x8FDB;&#x884C;&#x4F18;&#x5316;&#x3002;&#x5177;&#x4F53;&#x6765;&#x8BF4;&#xFF0C;&#x6211;&#x4EEC;&#x521D;&#x59CB;&#x5316; $h(u)$ &#x4E3A; $u$ &#x5230; $t$ &#x7684;&#x6700;&#x77ED;&#x8DDD;&#x79BB;&#xFF1B;&#x7279;&#x522B;&#x5730;&#xFF0C; $h(s)=n$ &#x3002;</p>
+<p>&#x5728; BFS &#x7684;&#x540C;&#x65F6;&#x6211;&#x4EEC;&#x987A;&#x4FBF;&#x68C0;&#x67E5;&#x56FE;&#x7684;&#x8FDE;&#x901A;&#x6027;&#xFF0C;&#x6392;&#x9664;&#x65E0;&#x89E3;&#x7684;&#x60C5;&#x51B5;&#x3002;</p>
+<h4 id="gap-&#x4F18;&#x5316;">GAP &#x4F18;&#x5316;</h4>
+<p>HLPP &#x63A8;&#x9001;&#x7684;&#x6761;&#x4EF6;&#x662F; $h(u)=h(v)+1$ &#xFF0C;&#x800C;&#x5982;&#x679C;&#x5728;&#x7B97;&#x6CD5;&#x7684;&#x67D0;&#x4E00;&#x65F6;&#x523B;&#xFF0C; $h(u)=t$ &#x7684;&#x7ED3;&#x70B9;&#x4E2A;&#x6570;&#x4E3A; $0$ &#xFF0C;&#x90A3;&#x4E48;&#x5BF9;&#x4E8E; $h(u)&gt;t$ &#x7684;&#x7ED3;&#x70B9;&#x5C31;&#x6C38;&#x8FDC;&#x65E0;&#x6CD5;&#x63A8;&#x9001;&#x8D85;&#x989D;&#x6D41;&#x5230; $t$ &#xFF0C;&#x56E0;&#x6B64;&#x53EA;&#x80FD;&#x9001;&#x56DE; $s$ &#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x5C31;&#x5728;&#x8FD9;&#x65F6;&#x76F4;&#x63A5;&#x8BA9;&#x4ED6;&#x4EEC;&#x7684;&#x9AD8;&#x5EA6;&#x53D8;&#x6210; $n+1$ &#xFF0C;&#x4EE5;&#x5C3D;&#x5FEB;&#x63A8;&#x9001;&#x56DE; $s$ &#xFF0C;&#x51CF;&#x5C11;&#x91CD;&#x8D34;&#x6807;&#x7B7E;&#x7684;&#x64CD;&#x4F5C;&#x3002;</p>
+<p>??? &quot;LuoguP4722&#x3010;&#x6A21;&#x677F;&#x3011;&#x6700;&#x5927;&#x6D41; &#x52A0;&#x5F3A;&#x7248;/&#x9884;&#x6D41;&#x63A8;&#x8FDB;&quot;</p>
+<pre><code>```cpp
+#include &lt;cstdio&gt;
+#include &lt;cstring&gt;
+#include &lt;queue&gt;
+using namespace std;
+const int N = 1e4 + 4, M = 2e5 + 5, INF = 0x3f3f3f3f;
+int n, m, s, t;
+
+struct qxx {
+  int nex, t, v;
+};
+qxx e[M * 2];
+int h[N], cnt = 1;
+void add_path(int f, int t, int v) { e[++cnt] = (qxx){h[f], t, v}, h[f] = cnt; }
+void add_flow(int f, int t, int v) {
+  add_path(f, t, v);
+  add_path(t, f, 0);
+}
+
+int ht[N], ex[N], gap[N];  // &#x9AD8;&#x5EA6;&#xFF1B;&#x8D85;&#x989D;&#x6D41;&#xFF1B;gap &#x4F18;&#x5316;
+bool bfs_init() {
+  memset(ht, 0x3f, sizeof(ht));
+  queue&lt;int&gt; q;
+  q.push(t), ht[t] = 0;
+  while (q.size()) {  // &#x53CD;&#x5411; BFS, &#x9047;&#x5230;&#x6CA1;&#x6709;&#x8BBF;&#x95EE;&#x8FC7;&#x7684;&#x7ED3;&#x70B9;&#x5C31;&#x5165;&#x961F;
+    int u = q.front();
+    q.pop();
+    for (int i = h[u]; i; i = e[i].nex) {
+      const int &amp;v = e[i].t;
+      if (e[i ^ 1].v &amp;&amp; ht[v] &gt; ht[u] + 1) ht[v] = ht[u] + 1, q.push(v);
+    }
+  }
+  return ht[s] != INF;  // &#x5982;&#x679C;&#x56FE;&#x4E0D;&#x8FDE;&#x901A;&#xFF0C;&#x8FD4;&#x56DE; 0
+}
+struct cmp {
+  bool operator()(int a, int b) const { return ht[a] &lt; ht[b]; }
+};                                         // &#x4F2A;&#x88C5;&#x6392;&#x5E8F;&#x51FD;&#x6570;
+priority_queue&lt;int, vector&lt;int&gt;, cmp&gt; pq;  // &#x5C06;&#x9700;&#x8981;&#x63A8;&#x9001;&#x7684;&#x7ED3;&#x70B9;&#x4EE5;&#x9AD8;&#x5EA6;&#x9AD8;&#x7684;&#x4F18;&#x5148;
+bool vis[N];                               // &#x662F;&#x5426;&#x5728;&#x4F18;&#x5148;&#x961F;&#x5217;&#x4E2D;
+int push(int u) {  // &#x5C3D;&#x53EF;&#x80FD;&#x901A;&#x8FC7;&#x80FD;&#x591F;&#x63A8;&#x9001;&#x7684;&#x8FB9;&#x63A8;&#x9001;&#x8D85;&#x989D;&#x6D41;
+  for (int i = h[u]; i; i = e[i].nex) {
+    const int &amp;v = e[i].t, &amp;w = e[i].v;
+    if (!w || ht[u] != ht[v] + 1) continue;
+    int k = min(w, ex[u]);  // &#x53D6;&#x5230;&#x5269;&#x4F59;&#x5BB9;&#x91CF;&#x548C;&#x8D85;&#x989D;&#x6D41;&#x7684;&#x6700;&#x5C0F;&#x503C;
+    ex[u] -= k, ex[v] += k, e[i].v -= k, e[i ^ 1].v += k;  // push
+    if (v != s &amp;&amp; v != t &amp;&amp; !vis[v])
+      pq.push(v), vis[v] = 1;  // &#x63A8;&#x9001;&#x4E4B;&#x540E;&#xFF0C;v &#x5FC5;&#x7136;&#x6EA2;&#x51FA;&#xFF0C;&#x5219;&#x5165;&#x5806;&#xFF0C;&#x7B49;&#x5F85;&#x88AB;&#x63A8;&#x9001;
+    if (!ex[u]) return 0;  // &#x5982;&#x679C;&#x5DF2;&#x7ECF;&#x63A8;&#x9001;&#x5B8C;&#x5C31;&#x8FD4;&#x56DE;
+  }
+  return 1;
+}
+void relabel(int u) {  // &#x91CD;&#x8D34;&#x6807;&#x7B7E;&#xFF08;&#x9AD8;&#x5EA6;&#xFF09;
+  ht[u] = INF;
+  for (int i = h[u]; i; i = e[i].nex)
+    if (e[i].v) ht[u] = min(ht[u], ht[e[i].t]);
+  ++ht[u];
+}
+int hlpp() {                  // &#x8FD4;&#x56DE;&#x6700;&#x5927;&#x6D41;
+  if (!bfs_init()) return 0;  // &#x56FE;&#x4E0D;&#x8FDE;&#x901A;
+  ht[s] = n;
+  memset(gap, 0, sizeof(gap));
+  for (int i = 1; i &lt;= n; i++)
+    if (ht[i] != INF) gap[ht[i]]++;  // &#x521D;&#x59CB;&#x5316; gap
+  for (int i = h[s]; i; i = e[i].nex) {
+    const int v = e[i].t, w = e[i].v;  // &#x961F;&#x5217;&#x521D;&#x59CB;&#x5316;
+    if (!w) continue;
+    ex[s] -= w, ex[v] += w, e[i].v -= w, e[i ^ 1].v += w;  // &#x6CE8;&#x610F;&#x53D6;&#x6D88; w &#x7684;&#x5F15;&#x7528;
+    if (v != s &amp;&amp; v != t &amp;&amp; !vis[v]) pq.push(v), vis[v] = 1;  // &#x5165;&#x961F;
+  }
+  while (pq.size()) {
+    int u = pq.top();
+    pq.pop(), vis[u] = 0;
+    while (push(u)) {  // &#x4ECD;&#x7136;&#x6EA2;&#x51FA;
+      // &#x5982;&#x679C; u &#x7ED3;&#x70B9;&#x539F;&#x6765;&#x6240;&#x5728;&#x7684;&#x9AD8;&#x5EA6;&#x6CA1;&#x6709;&#x7ED3;&#x70B9;&#x4E86;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#x51FA;&#x73B0;&#x65AD;&#x5C42;
+      if (!--gap[ht[u]])
+        for (int i = 1; i &lt;= n; i++)
+          if (i != s &amp;&amp; i != t &amp;&amp; ht[i] &gt; ht[u] &amp;&amp; ht[i] &lt; n + 1) ht[i] = n + 1;
+      relabel(u);
+      ++gap[ht[u]];  // &#x65B0;&#x7684;&#x9AD8;&#x5EA6;&#xFF0C;&#x66F4;&#x65B0; gap
+    }
+  }
+  return ex[t];
+}
+int main() {
+  scanf(&quot;%d%d%d%d&quot;, &amp;n, &amp;m, &amp;s, &amp;t);
+  for (int i = 1, u, v, w; i &lt;= m; i++) {
+    scanf(&quot;%d%d%d&quot;, &amp;u, &amp;v, &amp;w);
+    add_flow(u, v, w);
+  }
+  printf(&quot;%d&quot;, hlpp());
+  return 0;
+}
+```
+</code></pre><p>&#x611F;&#x53D7;&#x4E00;&#x4E0B;&#x8FD0;&#x884C;&#x8FC7;&#x7A0B;</p>
+<p><img src="images/1152.png" alt="HLPP"></p>
+<p>&#x5176;&#x4E2D; pic13 &#x5230; pic14 &#x6267;&#x884C;&#x4E86; Relabel(4)&#xFF0C;&#x5E76;&#x8FDB;&#x884C;&#x4E86; GAP &#x4F18;&#x5316;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../flow.html" class="navigation navigation-prev " aria-label="Previous page: 网络流">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="min-cut.html" class="navigation navigation-next " aria-label="Next page: 最小割">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"最大流","level":"1.10.21.1","depth":3,"next":{"title":"最小割","level":"1.10.21.2","depth":3,"path":"docs/graph/flow/min-cut.md","ref":"docs/graph/flow/min-cut.md","articles":[]},"previous":{"title":"网络流","level":"1.10.21","depth":2,"path":"docs/graph/flow.md","ref":"docs/graph/flow.md","articles":[{"title":"最大流","level":"1.10.21.1","depth":3,"path":"docs/graph/flow/max-flow.md","ref":"docs/graph/flow/max-flow.md","articles":[]},{"title":"最小割","level":"1.10.21.2","depth":3,"path":"docs/graph/flow/min-cut.md","ref":"docs/graph/flow/min-cut.md","articles":[]},{"title":"费用流","level":"1.10.21.3","depth":3,"path":"docs/graph/flow/min-cost.md","ref":"docs/graph/flow/min-cost.md","articles":[]},{"title":"上下界网络流","level":"1.10.21.4","depth":3,"path":"docs/graph/flow/bound.md","ref":"docs/graph/flow/bound.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/graph/flow/max-flow.md","mtime":"2019-10-11T02:45:52.826Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-11T09:29:41.422Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
